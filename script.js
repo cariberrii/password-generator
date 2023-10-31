@@ -102,6 +102,7 @@ function getPasswordOptions() {
   // Use confirm booleans and store user choices in empty array
   var charOptions = [];
   // var userOptions = {length, charOptions}
+  while (lowercase != true && uppercase != true && numeric != true && special != true) {
   if(confirm("Use lowercase characters?")) {
     charOptions = charOptions.concat(lowerCasedCharacters);
     var lowercase = true;
@@ -118,9 +119,13 @@ function getPasswordOptions() {
     charOptions = charOptions.concat(specialCharacters);
     var special = true;
   }
+  if(lowercase != true && uppercase != true && numeric != true && special != true) {
+    alert("Please choose at least one character type.");
+  }
+  }
   console.log(charOptions);
   
-  // return { length: 0, lowercase: true, uppercase: true, numeric: true, special: true };
+  // return { length: 0, charOptions: [array], lowercase: true, uppercase: true, numeric: true, special: true };
   return userOptions = {length, charOptions, lowercase, uppercase, numeric, special};
 }
 
