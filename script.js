@@ -100,7 +100,7 @@ function getPasswordOptions() {
   }
   // Character types
   // Use confirm booleans and store user choices in empty array
-  var charOptions = "";
+  var charOptions = [];
   // var userOptions = {length, charOptions}
   if(confirm("Use lowercase characters?")) {
     charOptions = charOptions.concat(lowerCasedCharacters);
