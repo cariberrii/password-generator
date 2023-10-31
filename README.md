@@ -4,6 +4,11 @@
 
 ## Description
  
+ This password generator stores input from the user via prompts and confirms to produce a random password from a set of given character types. The code is organized into multiple functional code blocks which are executed, or called, in a final function to generate the password. This makes it easier to debug and understand what the functionality of each section is. 
+
+ There are multiple concerns to address with user input, such as the user entering no data or data that is unrelated to the prompt, and an acceptable input must be validated by passing through a conditional statement. 
+ One requirement which remains an additional step in my understanding of JavaScript is how to ensure that at least one of each character type requested by the user will appear in the password. In theory, I understand using the .some method to test the generated password contains a character from each array would work, but in practice I will need to see it in action at least once in this context to fully grasp the concept and reapply in another setting.
+
  
 
 ## Table of Contents
@@ -12,7 +17,7 @@
 - [License](#license)
 
 ## Console Screenshot
-![Screenshot Console](#)
+![Screenshot Console](assets/images/cariberrii.github.io_password-generator_.png)
 
 ## License
 
