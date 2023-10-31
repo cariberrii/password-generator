@@ -101,7 +101,6 @@ function getPasswordOptions() {
   // Character types
   // Use confirm booleans and store user choices in empty array
   var charOptions = "";
-  var userOptions = {};
   // var userOptions = {length, charOptions}
   if(confirm("Use lowercase characters?")) {
     charOptions = charOptions.concat(lowerCasedCharacters);
@@ -127,13 +126,23 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+  var randChars = "";
 
+  for(var i = 0; i <= userOptions.length; i++) {
+    randChars += arr[Math.floor(Math.random() * arr.length + 1)];
+  }
+
+console.log(randChars);
+return randChars;
 }
 
 // Function to generate password with user input
 function generatePassword() {
   var options = getPasswordOptions();
   console.log(options);
+  var random = getRandom(userOptions.charOptions);
+  console.log(random);
+  return random;
 }
 
 // Get references to the #generate element
