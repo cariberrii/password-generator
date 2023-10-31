@@ -91,13 +91,15 @@ var upperCasedCharacters = [
 // Function to prompt user for password options
 function getPasswordOptions() {
  // use the prompt function to ask the user
- while (length < 8 || length > 128) {
+ // requires input and must meet criteria
+ while (length < 8 || length > 128 || !length) {
   length = parseInt(prompt("Please enter a password length between 8 and 128 characters:"));
-  // use if statements to evaluate if user has met criteria
-  if (length < 8 || length > 128) {
+  // use if statement to evaluate if user has met criteria
+  if (length < 8 || length > 128 || !length) {
     alert("Please choose a number between 8 and 128.");
     }
   }
+  console.log(length);
   // Character types
   // Use confirm booleans and store user choices in empty array
   var charOptions = [];
